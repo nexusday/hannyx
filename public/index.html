@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannyx Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-shopping-bag animated-icon"></i> Hannyx Shop</h1>
+        <div class="header-icons">
+            <div class="customer-service" id="customer-service">
+                <i class="fas fa-headset"></i>
+            </div>
+            <div class="cart-icon" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="catalog">
+            <h2>Catálogo de Productos</h2>
+            <div id="products"></div>
+        </section>
+    </main>
+
+    <div id="product-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-product">
+                <div class="modal-image">
+                    <img id="modal-product-image" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-product-name"></h2>
+                    <p id="modal-product-price" class="price"></p>
+                    <p id="modal-product-description"></p>
+                    <button id="add-to-cart-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal-overlay hidden">
+        <div class="modal-content cart-modal">
+            <button class="modal-close">&times;</button>
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total: S/ <span id="cart-total">0</span></strong>
+            </div>
+            <button id="checkout-btn">Realizar Pago</button>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal-overlay hidden">
+        <div class="modal-content checkout-modal">
+            <button class="modal-close">&times;</button>
+            <h2>Información de Pago</h2>
+            <form id="checkout-form">
+                <input type="text" id="customer-name" placeholder="Nombre completo" required>
+                <input type="text" id="customer-dni" placeholder="DNI" required>
+                <input type="text" id="customer-address" placeholder="Dirección" required>
+                <input type="text" id="customer-city" placeholder="Ciudad" required>
+                <input type="text" id="customer-province" placeholder="Provincia" required>
+                <input type="text" id="customer-agency" placeholder="Agencia" required>
+                <input type="text" id="customer-phone" placeholder="Número de teléfono" required>
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="advisors-modal" class="modal-overlay hidden">
+        <div class="modal-content advisors-modal">
+            <button class="modal-close">&times;</button>
+            <h2>Atención al Cliente</h2>
+            <p>¿Con qué asesor de ventas deseas comunicarte?</p>
+            <div id="advisors-list"></div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

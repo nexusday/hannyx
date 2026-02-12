@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Hannyx Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel Admin</h1>
+        <nav>
+            <a href="index.html">Ver Catálogo</a>
+        </nav>
+    </header>
+    <main>
+        <section id="add-product">
+            <h2>Agregar Producto</h2>
+            <form id="product-form">
+                <input type="text" id="name" placeholder="Nombre" required>
+                <input type="number" id="price" placeholder="Precio" step="0.01" required>
+                <input type="file" id="image" accept="image/*">
+                <textarea id="description" placeholder="Descripción" required></textarea>
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <section id="add-advisor">
+            <h2>Agregar Asesor</h2>
+            <form id="advisor-form">
+                <input type="text" id="advisor-name" placeholder="Nombre del Asesor" required>
+                <input type="text" id="advisor-number" placeholder="Número de Contacto" required>
+                <button type="submit">Agregar Asesor</button>
+            </form>
+        </section>
+
+        <section id="admin-products">
+            <h2>Productos existentes</h2>
+            <div id="admin-products-list"></div>
+        </section>
+
+        <section id="admin-advisors">
+            <h2>Asesores existentes</h2>
+            <div id="admin-advisors-list"></div>
+        </section>
+    </main>
+    <script src="js/admin.js"></script>
+</body>
+</html>
